@@ -26,7 +26,7 @@ export const displayPeopleAndLength = (
     returnPeopleAndLength(stringArray).forEach(([name, lenght]) => {
         console.log(
             `${name} contient ${
-                mustConvert ? NumberToString[lenght] : lenght
+                mustConvert && name.length <= 9 ? NumberToString[lenght] : lenght
             } caractères`
         );
     });
